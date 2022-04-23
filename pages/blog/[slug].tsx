@@ -1,9 +1,8 @@
-import { useRouter } from 'next/router';
-
 import Post from '@/lib/Post';
 import MarkdownParser from '@/lib/MarkdownParser';
 import PostFetcher from '@/lib/PostFetcher';
 import PostMarkdown from '@/components/post-markdown';
+import Link from 'next/link';
 
 type PageProps = {
     post: Post;
@@ -13,15 +12,14 @@ type PageProps = {
 
 const PostPage = ({ post, content, morePosts }: PageProps) =>
 {
-    const router = useRouter();
-
-    // TODO: if (!router.isFallback && !post?.slug) { return <ErrorPage statusCode={404} /> }
-
     post = Post.fromJSONString(post);
-    console.log(post, 'here?');
 
     return (
         <div className='py-4 px-6'>
+            <Link href={'/blog'}>
+                <a className='bg-black text-white text-sm py-2 px-3 inline-block'>Back to All Posts</a>
+            </Link>
+            <hr />
             <h1 className='text-3xl font-bold'>{post.getTitle()} <span className='text-gray-400 text-sm'>/{post.getSlug()}</span></h1>
             <PostMarkdown html={content} />
         </div>
@@ -60,7 +58,6 @@ export async function getStaticPaths()
             slug: post.getSlug(),
         }
     }));
-    console.log(paths);
     return {
         paths,
         fallback: false
