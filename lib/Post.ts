@@ -1,33 +1,10 @@
-class Post
+import GrayMatterModel from '@/lib/GrayMatterModel';
+
+export default class Post extends GrayMatterModel
 {
     public constructor()
     {
-    }
-
-    private slug: StringOrNull = null;
-
-    public getSlug(): StringOrNull
-    {
-        return this.slug;
-    }
-
-    public setSlug(slug: StringOrNull): Post
-    {
-        this.slug = slug;
-        return this;
-    }
-
-    private title: StringOrNull = null;
-
-    public getTitle(): StringOrNull
-    {
-        return this.title;
-    }
-
-    public setTitle(title: StringOrNull): Post
-    {
-        this.title = title;
-        return this;
+        super();
     }
 
     public static fromObject(object: any): Post
@@ -51,5 +28,3 @@ class Post
         return Post.fromObject(JSON.parse(json));
     }
 }
-
-export default Post;

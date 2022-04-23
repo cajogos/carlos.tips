@@ -29,6 +29,4 @@ export default class PostFetcher
         });
         return posts;
     }
-
-    // TODO: Fetch posts by tag
 }
