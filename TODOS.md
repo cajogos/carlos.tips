@@ -1,7 +1,7 @@
-# TODOs
-
-- Load posts from markdown.
-  - carlos.tips/posts/post-name
-- Use gray-matter (frontmatter on .md).
-- Create the gists pages: quickly share code snippets.
+- TODO: Use gray-matter (frontmatter on .md).
+- TODO: Load Author info from _authors JSON files.
+- TODO: Create the gists pages: quickly share code snippets.
   - carlos.tips/gists/gist-001
+- TODO: Run site through https://web.dev/measure/ to improve SEO
+- TODO: Find an analytics to use
+- TODO: Create an automatic sitemap.xml file

@@ -19,8 +19,10 @@
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
       "@/styles/*": ["styles/*"],
+      "@/types/*": ["types/*"],
+      "@/lib/*": ["lib/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
