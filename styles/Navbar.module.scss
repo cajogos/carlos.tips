@@ -1,0 +1,12 @@
+.Navbar {
+    @apply flex justify-center max-w-full p-3;
+    @apply bg-gray-800 text-white;
+
+    .NavLink {
+        @apply mx-2;
+
+        &:hover {
+            @apply underline;
+        }
+    }
+}

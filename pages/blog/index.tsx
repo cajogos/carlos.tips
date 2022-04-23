@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 function PostsIndex()
 {
     return (
         <div>PostsIndex</div>
-    )
+    );
 }
 
-export default PostsIndex
+export default PostsIndex;
