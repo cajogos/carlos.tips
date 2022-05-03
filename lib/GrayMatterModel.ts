@@ -27,4 +27,18 @@ export default abstract class Model
         this.title = title;
         return this;
     }
+
+    protected dateCreated: StringOrNull = null;
+
+    public getDateCreated(): StringOrNull
+    {
+        return this.dateCreated;
+    }
+
+    protected dateUpdated: StringOrNull = null;
+
+    public getDateUpdated(): StringOrNull
+    {
+        return this.dateUpdated;
+    }
 };

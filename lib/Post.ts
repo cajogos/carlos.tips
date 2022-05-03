@@ -7,6 +7,13 @@ export default class Post extends GrayMatterModel
         super();
     }
 
+    private author: StringOrNull = null;
+
+    public getAuthor(): StringOrNull
+    {
+        return this.author;
+    }
+
     public static fromObject(object: any): Post
     {
         let instance = new Post();
